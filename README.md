@@ -2,7 +2,7 @@
 ```bash
 pip install -r requirements.txt
 ```
-*After installing the nesccesary requirements we need to create the folder structure for the project to be running and storing various values so we run the list_of_files which is been created in template.py * 
+After installing the nesccesary requirements we need to create the folder structure for the project to be running and storing various values so we run the list_of_files which is been created in **template.py** 
 ``` bash
 python template.py
 ```
