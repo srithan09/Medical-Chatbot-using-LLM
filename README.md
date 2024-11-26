@@ -7,4 +7,4 @@ After installing the nesccesary requirements we need to create the folder struct
 python template.py
 ```
 # Architecture Diagram
-![Architecture Diagram]("Medical-chatbot-using-LLM\research\Architecture Diagram\LLm-Page-2.jpg")
+![Architecture Diagram](research/Architecture%20Diagram/LLm-Page-2.jpg)
