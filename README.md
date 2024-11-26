@@ -6,3 +6,4 @@ After installing the nesccesary requirements we need to create the folder struct
 ``` bash
 python template.py
 ```
+# Architecture Diagram
