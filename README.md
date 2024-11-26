@@ -15,13 +15,9 @@ The **Gale Encyclopedia of Medicine (GEM)** is a comprehensive and authoritative
 **Features of the Gale Encyclopedia of Medicine:**
 
 **1) Comprehensive Coverage:** GEM includes thousands of entries that provide detailed explanations of medical terms, conditions, and procedures.
-
 **2) Clarity and Accessibility:** Content is written in a way that balances technical detail with accessibility, making it suitable for both medical professionals and the general public.
-
 **3) Standardized Format:** Each entry follows a consistent format, typically including an overview, symptoms, causes, diagnosis, treatment options, and prognosis.
-
 **4) Expert Review:** Entries are vetted by healthcare experts, ensuring high-quality, evidence-based information.
-
 **5)Illustrations and Tables:** Many articles include diagrams, charts, and tables that enhance understanding.
 
 
