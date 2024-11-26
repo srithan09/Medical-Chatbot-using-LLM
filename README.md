@@ -27,12 +27,12 @@ The **Gale Encyclopedia of Medicine (GEM)** is a comprehensive and authoritative
 ## Extracting and Splitting Text from PDFs for Easy Processing
 To extract text from a PDF and split it into manageable chunks for further processing, we use tools like PyPDFLoader and RecursiveCharacterTextSplitter. Here’s an explanation of how this is done step by step:
 
-### Step 1: Loading the PDF**
+### Step 1: Loading the PDF
 1) PyPDFLoader is a utility that facilitates reading and extracting text content from PDF files.
 2) The loader reads the PDF document page by page, extracting the textual content while handling encoding issues that PDFs often have.
 3) It essentially transforms the PDF’s raw text into a Python-friendly format, like strings or structured data.
 
-### Step 2: Splitting Text into Chunks**
+### Step 2: Splitting Text into Chunks
 After loading the text from the PDF, the extracted content is often a single block of text or split only by pages. This needs to be broken down further into smaller, more manageable chunks for processing, especially when dealing with NLP tasks or vector embeddings.
 
 1. Recursive Splitting Logic:
