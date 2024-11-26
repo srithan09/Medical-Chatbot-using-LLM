@@ -59,3 +59,5 @@ The output of this process is a list of text chunks, where:
 - Each chunk is coherent and respects logical boundaries.
 - Chunk sizes are optimized for downstream processing, such as embedding generation or feeding into NLP models.
 - Overlaps, if configured, ensure no loss of context between consecutive chunks.
+
+
