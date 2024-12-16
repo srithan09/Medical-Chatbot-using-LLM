@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
   <diagram name="Page-1" id="vKZ-V5K5pDfOQ2ss4dRj">
-    <mxGraphModel dx="1444" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="1">
+    <mxGraphModel dx="882" dy="464" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="1">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -123,6 +123,21 @@
         </mxCell>
         <mxCell id="f3LMZ3NK-MsZDFltU_R9-39" value="&lt;font style=&quot;font-size: 16px;&quot; color=&quot;#ff512e&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;lt;Answer&amp;gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1200" y="220" width="90" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="f3LMZ3NK-MsZDFltU_R9-40" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Document Loading&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="25" y="90" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f3LMZ3NK-MsZDFltU_R9-41" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Splitting&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="215" y="90" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f3LMZ3NK-MsZDFltU_R9-42" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Storage&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="90" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f3LMZ3NK-MsZDFltU_R9-43" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Retrieval&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="90" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f3LMZ3NK-MsZDFltU_R9-44" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Output&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="925" y="90" width="130" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
