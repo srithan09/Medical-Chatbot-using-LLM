@@ -30,7 +30,7 @@ docsearch = Pinecone.from_existing_index(
     embedding=embeddings
 )
 
-retriver = docsearch.as_retriever(search_type="similarity", search_kwargs={"k": 4})
+retriver = docsearch.as_retriever(search_type="similarity", search_kwargs={"k": 6})
 
 llm = ChatGroq(api_key=GROQ_API_KEY, temperature=0.4, max_tokens=500)
 prompt = ChatPromptTemplate.from_messages(
