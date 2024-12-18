@@ -9,21 +9,21 @@ python template.py
 # System Diagram
 ![System Diagram](research/Architecture%20Diagram/system_diagram_REU_drawio.png)
 
+# Document Loading
 ## Medical Book 
-The **Gale Encyclopedia of Medicine (GEM)** is a comprehensive and authoritative reference source covering a wide range of medical topics, including diseases, disorders, treatments, drugs, diagnostic procedures, and medical advancements. Written by medical professionals and reviewed by experts, it serves as a reliable resource for accurate, up-to-date health and medical information.
+The **Gale Encyclopedia of Medicine (GEM)** and **Essentials of Medical Microbiology (EMM)** complement each other in providing comprehensive medical information. Together, these books cover thousands of diseases, disorders, and medical conditions, each following a structured, systemized approach to make information accessible for learners and professionals alike.
 
-**Features of the Gale Encyclopedia of Medicine:**
+### Combined Features for Building a Chatbot:
+1. **Broad Disease Coverage**: GEM provides detailed descriptions of medical conditions, while EMM focuses on microbiological aspects of diseases. Together, they can form a vast knowledge base, catering to a variety of queries.
 
-**1) Comprehensive Coverage:** GEM includes thousands of entries that provide detailed explanations of medical terms, conditions, and procedures.
+2. **Structured Approach**: Both books use standardized formats, such as overviews, symptoms, diagnosis, and treatment, enabling consistent and reliable chatbot responses.
 
-**2) Clarity and Accessibility:** Content is written in a way that balances technical detail with accessibility, making it suitable for both medical professionals and the general public.
+3. **Accessibility**: Content is written in a clear, concise manner, suitable for general users and healthcare professionals, which aligns with user-friendly chatbot interactions.
 
-**3) Standardized Format:** Each entry follows a consistent format, typically including an overview, symptoms, causes, diagnosis, treatment options, and prognosis.
+4. **Visual Aids**: Inclusion of diagrams, tables, and charts in both books enhances the user's understanding and can be leveraged for multimedia responses in the chatbot.
 
-**4) Expert Review:** Entries are vetted by healthcare experts, ensuring high-quality, evidence-based information.
-
-**5)Illustrations and Tables:** Many articles include diagrams, charts, and tables that enhance understanding.
-
+5. **Expert-Reviewed Content**: High-quality, evidence-based information ensures the chatbot's credibility and trustworthiness.
+# Splitting
 ## Extracting and Splitting Text from PDFs for Easy Processing
 To extract text from a PDF and split it into manageable chunks for further processing, we use tools like PyPDFLoader and RecursiveCharacterTextSplitter. Here’s an explanation of how this is done step by step:
 
