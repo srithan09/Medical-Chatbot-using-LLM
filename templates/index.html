@@ -16,21 +16,42 @@
             height: 100%;
             width: 100%;
             font-family: 'Arial', sans-serif;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         body {
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
+            background: var(--background-color);
+            color: var(--text-color);
+        }
+
+        :root {
+            /* Light Mode */
+            --background-color: #f5f5f5;
+            --header-gradient: linear-gradient(135deg, #ff6a88, #ff99a5);
+            --bot-message-bg: #ff6a88;
+            --user-message-bg: #4caf50;
+            --text-color: #333;
+        }
+
+        [data-theme="dark"] {
+            /* Dark Mode */
+            --background-color: #121212;
+            --header-gradient: linear-gradient(135deg, #1f4037, #99f2c8);
+            --bot-message-bg: #32cd32; /* Green for bot messages */
+            --user-message-bg: #228b22; /* Darker green for user messages */
+            --text-color: #f5f5f5;
         }
 
         /* Chat Container */
         .chat-container {
             width: 100%;
+            max-width: 500px;
             height: 100%;
-            background: #fff;
+            max-height: 700px;
+            background: var(--background-color);
             display: flex;
             flex-direction: column;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -38,13 +59,33 @@
 
         /* Header */
         .chat-header {
-            background: linear-gradient(135deg, #ff6a88, #ff99a5);
+            background: var(--header-gradient);
             color: #fff;
             text-align: center;
             padding: 20px;
             font-size: 22px;
             font-weight: bold;
             text-transform: uppercase;
+            position: relative;
+        }
+
+        .chat-header button {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            padding: 5px 10px;
+            background: #fff;
+            color: var(--text-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .chat-header button:hover {
+            background: #ddd;
         }
 
         /* Chat Body */
@@ -52,7 +93,6 @@
             flex: 1;
             padding: 20px;
             overflow-y: auto;
-            background: #f5f5f5;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -69,14 +109,14 @@
         }
 
         .message.bot {
-            background: #ff6a88;
+            background: var(--bot-message-bg);
             color: #fff;
             align-self: flex-start;
             border-top-left-radius: 0;
         }
 
         .message.user {
-            background: #4caf50;
+            background: var(--user-message-bg);
             color: #fff;
             align-self: flex-end;
             border-top-right-radius: 0;
@@ -87,7 +127,7 @@
             display: flex;
             align-items: center;
             padding: 15px;
-            background: #fff;
+            background: var(--background-color);
             border-top: 1px solid #ddd;
         }
 
@@ -123,7 +163,7 @@
         }
 
         .chat-body::-webkit-scrollbar-thumb {
-            background: #ff6a88;
+            background: var(--bot-message-bg);
             border-radius: 4px;
         }
 
@@ -136,6 +176,7 @@
     <div class="chat-container">
         <div class="chat-header">
             Dr. Chat
+            <button id="theme-toggle">Dark Mode</button>
         </div>
         <div class="chat-body" id="chat-body">
             <div class="message bot">
@@ -149,10 +190,25 @@
     </div>
 
     <script>
+        const body = document.body;
+        const themeToggle = document.getElementById('theme-toggle');
         const chatBody = document.getElementById('chat-body');
         const chatInput = document.getElementById('chat-input');
         const sendBtn = document.getElementById('send-btn');
 
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            const isDarkMode = body.hasAttribute('data-theme');
+            if (isDarkMode) {
+                body.removeAttribute('data-theme');
+                themeToggle.textContent = 'Dark Mode';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = 'Light Mode';
+            }
+        });
+
+        // Append message to chat
         function appendMessage(content, type) {
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${type}`;
@@ -161,6 +217,7 @@
             chatBody.scrollTop = chatBody.scrollHeight;
         }
 
+        // Send message
         sendBtn.addEventListener('click', () => {
             const userInput = chatInput.value.trim();
             if (!userInput) return;
@@ -185,6 +242,7 @@
             });
         });
 
+        // Enter key sends message
         chatInput.addEventListener('keypress', (event) => {
             if (event.key === 'Enter') {
                 sendBtn.click();
