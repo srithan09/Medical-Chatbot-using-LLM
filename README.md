@@ -6,8 +6,8 @@ After installing the nesccesary requirements we need to create the folder struct
 ``` bash
 python template.py
 ```
-# Architecture Diagram
-![Architecture Diagram](research/Architecture%20Diagram/LLm-Page-2.jpg)
+# System Diagram
+![System Diagram](research/Architecture%20Diagram/system_diagram_REU.jpg)
 
 ## Medical Book 
 The **Gale Encyclopedia of Medicine (GEM)** is a comprehensive and authoritative reference source covering a wide range of medical topics, including diseases, disorders, treatments, drugs, diagnostic procedures, and medical advancements. Written by medical professionals and reviewed by experts, it serves as a reliable resource for accurate, up-to-date health and medical information.
