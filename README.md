@@ -9,7 +9,7 @@ python template.py
 # System Diagram
 ![System Diagram](research/Architecture%20Diagram/system_diagram_REU_drawio.png)
 
-# (1).Document Loading
+# (1) Document Loading
 ## Medical Book 
 The **Gale Encyclopedia of Medicine (GEM)** and **Essentials of Medical Microbiology (EMM)** complement each other in providing comprehensive medical information. Together, these books cover thousands of diseases, disorders, and medical conditions, each following a structured, systemized approach to make information accessible for learners and professionals alike.
 
@@ -23,7 +23,7 @@ The **Gale Encyclopedia of Medicine (GEM)** and **Essentials of Medical Microbio
 4. **Visual Aids**: Inclusion of diagrams, tables, and charts in both books enhances the user's understanding and can be leveraged for multimedia responses in the chatbot.
 
 5. **Expert-Reviewed Content**: High-quality, evidence-based information ensures the chatbot's credibility and trustworthiness.
-# (2). Splitting
+# (2) Splitting
 ## Extracting and Splitting Text from PDFs for Easy Processing
 To extract text from a PDF and split it into manageable chunks for further processing, we use tools like PyPDFLoader and RecursiveCharacterTextSplitter. Here’s an explanation of how this is done step by step:
 
