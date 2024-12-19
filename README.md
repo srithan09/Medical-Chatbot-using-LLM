@@ -122,3 +122,28 @@ The output of this process is a list of text chunks, where:
   - Query: "What are the symptoms of diabetes?"
   - Retrieved Chunks: Relevant passages from medical documents about diabetes symptoms.
   - Combined Input: "Question: What are the symptoms of diabetes? Context: [retrieved chunk 1], [retrieved chunk 2]".
+
+  # (5) Output Generation 
+
+  ### How does LLM work?
+  #### 1. Input Preparation:  
+   - The query and the retrieved chunks of relevant text are combined into a structured format.  
+   - Example format:  
+      
+     Question: [User Query]  
+     Context: [Chunk 1], [Chunk 2], [Chunk 3]  
+     
+   - This ensures that the language model can understand the relationship between the query and the provided context.
+#### 2. Model Encoding:  
+   - The combined input is tokenized (converted into a sequence of numbers representing words or subwords) and passed to the LLaMA-2 model.  
+   - LLaMA-2 encodes the input to recognize the semantic relationships between the query and the context, focusing on relevant details within the chunks.
+#### 3. Attention Mechanism:  
+   - LLaMA-2 uses a self-attention mechanism to weigh the importance of different parts of the input.  
+   - It determines which context chunks or phrases are most relevant to answering the query.  
+   - This ensures the generated response is grounded in the retrieved text rather than relying solely on the model's prior knowledge.
+#### 4. Response Decoding:  
+   - Using its decoder module, LLaMA-2 generates a human-like response by predicting the most probable next token (word/subword) iteratively.  
+   - It ensures fluency and coherence while adhering to the information provided in the context.  
+#### 5. Grounded Output Generation:  
+   - The final response is heavily influenced by the retrieved context, ensuring accuracy and relevance.  
+   - If the query cannot be answered based on the context, LLaMA-2 is likely to generate a response acknowledging the lack of sufficient information.
