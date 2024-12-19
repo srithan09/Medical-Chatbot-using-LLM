@@ -60,7 +60,7 @@ The output of this process is a list of text chunks, where:
 - Chunk sizes are optimized for downstream processing, such as embedding generation or feeding into NLP models.
 - Overlaps, if configured, ensure no loss of context between consecutive chunks.
 
-# (2) Storage
+# (3) Storage
 ### Step 1: Embedding Generation
 - What Are Embeddings?
   - Embeddings are dense vector representations of text, where each vector encodes the semantic meaning of the corresponding text. These vectors exist in a high-dimensional space and enable computational systems to understand text contextually.
@@ -90,3 +90,35 @@ The output of this process is a list of text chunks, where:
 
 - Outcome: 
   - The vector database contains all the embeddings, mapped to their respective text chunks. It serves as a highly optimized storage and retrieval system.
+
+# (4) Retrieval of Text Using RAG Chain and Its Creation
+### What is RAG?
+- Core Idea: 
+  - Instead of relying solely on a language model’s pretrained knowledge, RAG incorporates relevant external information during the response generation process.
+  - It retrieves chunks of text from a knowledge base or document database (e.g., Pinecone vector database) and combines them with the input query to generate a context-aware response.
+  
+- Advantages:
+  - Ensures responses are grounded in factual and up-to-date data.
+  - Reduces reliance on static model training by dynamically retrieving information.
+
+  ### Steps in RAG Chain
+#### 1. Query Embedding
+- What Happens?:
+  - When a query is received, it is converted into an embedding using the same model used during the storage phase.
+  - This ensures that the query is represented in the same high-dimensional space as the stored embeddings.
+
+#### 2. Vector Search
+- What Happens?:
+  - The query embedding is passed to the vector database (e.g., Pinecone), where a similarity search is performed.
+  - Pinecone identifies the top N most similar embeddings (text chunks) based on cosine similarity or other distance metrics.
+- Outcome:
+  - A set of relevant text chunks that are most semantically similar to the query.
+
+#### 3. Combine with Query
+- What Happens?:
+  - The retrieved text chunks are combined with the query as context.
+  - This extended context ensures that the language model has all the necessary information to generate a meaningful and accurate response.
+- Example Context:
+  - Query: "What are the symptoms of diabetes?"
+  - Retrieved Chunks: Relevant passages from medical documents about diabetes symptoms.
+  - Combined Input: "Question: What are the symptoms of diabetes? Context: [retrieved chunk 1], [retrieved chunk 2]".
