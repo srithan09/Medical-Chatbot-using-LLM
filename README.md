@@ -123,10 +123,10 @@ The output of this process is a list of text chunks, where:
   - Retrieved Chunks: Relevant passages from medical documents about diabetes symptoms.
   - Combined Input: "Question: What are the symptoms of diabetes? Context: [retrieved chunk 1], [retrieved chunk 2]".
 
-  # (5) Output Generation 
+# (5) Output Generation 
 
-  ### How does LLM work?
-  #### 1. Input Preparation:  
+### How does LLM work?
+#### 1. Input Preparation:  
    - The query and the retrieved chunks of relevant text are combined into a structured format.  
    - Example format:  
       
