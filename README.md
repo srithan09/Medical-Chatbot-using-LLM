@@ -60,4 +60,33 @@ The output of this process is a list of text chunks, where:
 - Chunk sizes are optimized for downstream processing, such as embedding generation or feeding into NLP models.
 - Overlaps, if configured, ensure no loss of context between consecutive chunks.
 
+# (2) Storage
+### Step 1: Embedding Generation
+- What Are Embeddings?
+  - Embeddings are dense vector representations of text, where each vector encodes the semantic meaning of the corresponding text. These vectors exist in a high-dimensional space and enable computational systems to understand text contextually.
 
+- Purpose:
+  - To transform text chunks into numerical representations that capture their meaning.
+  - These embeddings facilitate similarity comparisons, as semantically similar chunks will have vectors that are close to each other in the vector space.
+
+- Process:
+  - A pretrained language model (e.g., from Hugging Face) is used. These models are trained on vast amounts of text data and specialize in capturing language semantics.
+  - Each chunk of text is passed through the embedding model, which outputs a fixed-size vector (e.g., 384 dimensions for some models).
+
+- Outcome: 
+  - Each chunk of text is represented as a unique embedding—a vector that encapsulates its semantic meaning.
+### Step 2: Storing Embeddings in Pinecone
+- What is Pinecone?
+  - Pinecone is a vector database designed for managing, searching, and retrieving embeddings. It is optimized for high-dimensional vector storage and retrieval operations.
+
+- Purpose:
+  - To store the embeddings for efficient retrieval based on similarity.
+  - Enable advanced operations like nearest neighbor search, which finds embeddings (and therefore text chunks) that are most similar to a given query embedding.
+
+- Process:
+  - Pinecone is initialized with an index that organizes and stores the embeddings.
+  - Along with embeddings, metadata such as the original chunk of text and its position in the document are stored. This metadata is crucial for linking retrieved embeddings back to the original document or its context.
+  - Once uploaded, the Pinecone database indexes these embeddings in such a way that it can perform fast similarity searches using techniques like Approximate Nearest Neighbor (ANN) search.
+
+- Outcome: 
+  - The vector database contains all the embeddings, mapped to their respective text chunks. It serves as a highly optimized storage and retrieval system.
