@@ -150,3 +150,6 @@ The output of this process is a list of text chunks, where:
 
 ## How Everything works together? - Architecture Diagram
 ![Architecture Diagram](research/Architecture%20Diagram/LLm-Page-2.jpg)
+
+## Front-End Integration
+![Front-End output](research/Architecture%20Diagram/output-front-end.png)
