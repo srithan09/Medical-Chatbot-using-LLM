@@ -147,3 +147,6 @@ The output of this process is a list of text chunks, where:
 #### 5. Grounded Output Generation:  
    - The final response is heavily influenced by the retrieved context, ensuring accuracy and relevance.  
    - If the query cannot be answered based on the context, LLaMA-2 is likely to generate a response acknowledging the lack of sufficient information.
+
+## How Everything works together? - Architecture Diagram
+![Architecture Diagram](research/Architecture%20Diagram/LLm-Page-2.jpg)
